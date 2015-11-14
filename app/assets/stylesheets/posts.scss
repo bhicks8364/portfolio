@@ -1,0 +1,12 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.blog {
+    background: url(multy-user.png) no-repeat center center fixed; 
+    height: 300px;
+}
+.post-pic {
+    height: 200px;
+    max-width: 400px;
+    overflow:hidden;
+}

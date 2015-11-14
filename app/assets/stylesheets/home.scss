@@ -1,0 +1,95 @@
+
+body {
+  background: url(wood.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#momlogo {
+    background-image: url(image-path('lighthouse.jpg'));
+    background-repeat:no-repeat;
+    background-position:center top;
+    opacity:0.7;
+    height: 300px;
+    padding: 30px;
+
+}
+.swirl {
+    background: url(orange_blue_swirl.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity:0.8;
+    padding-top: 20px;
+}
+.biz_people {
+    background: url(biz_people.jpg) no-repeat center top fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity:0.7;
+    padding-top: 20px;
+}
+.meetup {
+    background: url(meetup.jpg) no-repeat center top fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity:0.7;
+    padding-top: 20px;
+}
+.shadow-box {
+    background-color: rgba(0,0,0,0.55);
+    padding: 5px;
+    color: white;
+    margin: 2px;
+}
+.pic-right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+.pic-left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+#header  {
+
+
+    height: 300px;
+}
+#header-nav {
+    color: white;
+    padding: 2px;
+    background-color: rgba(0,0,0,0.55);
+
+}
+.dark {
+    background-color: rgba(0,0,0,0.55);
+    color: white;
+    padding: 8px;
+}
+
+/* line 48, /usr/local/rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_scaffolding.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 52, /usr/local/rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_scaffolding.scss */
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+/* line 58, /usr/local/rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_scaffolding.scss */
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.light {
+    background-color: rgba(255,255,255, 0.55);
+    padding: 8px;
+}
