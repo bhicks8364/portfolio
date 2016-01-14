@@ -1,7 +1,6 @@
 <div class='col-md-12 dark'>
-  <p id="notice"><%= notice %></p>
-
-<p>
+<div class='col-md-6 dark'>
+  <p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
@@ -10,11 +9,6 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-<%= link_to(about_path, class: 'thumbnail') do %>
-      <%= image_tag("#{@product.img_url}") %>
-    <% end %>
-
-
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
@@ -24,8 +18,21 @@
   <strong>Qty:</strong>
   <%= @product.qty %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+
+<div class='col-md-6'>
+  <%= link_to(about_path, class: 'thumbnail') do %>
+      <%= image_tag("#{@product.img_url}") %>
+    <% end %>
+</div>
+
+
+
+
+<div class='pull-right'>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>
 
 </div>

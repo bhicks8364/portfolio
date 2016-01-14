@@ -3,21 +3,21 @@ namespace :db do
 #   	    num = rand(from..to)
 #   		(Date.today - num.years).to_date
 # 	end	
-#   desc "Create 10 employers with random names and addresses"
-#   task :populate_employer => :environment do
-# 	require 'populator'
-# 	require 'ffaker'
-# 		Employer.populate 5 do |employer|
-# 			employer.name = FFaker::Company.name
-# 			employer.city = FFaker::Address.city
-# 			employer.state = FFaker::AddressUS.state
-# 			employer.zipcode = FFaker::AddressUS.zip_code
-# 			employer.address = FFaker::AddressUS.street_address
-# 			employer.contact_number = FFaker::PhoneNumber.phone_number
-# 			employer.contact_number = FFaker::PhoneNumber.phone_number
-# 		end
-# 	  puts 'All done!!!'
-#   end
+  desc "Create 10 admins with random names and addresses"
+  task :populate_admin => :environment do
+	require 'populator'
+	require 'ffaker'
+	require 'faker'
+	password = "password"
+		Admin.populate 5 do |admin|
+			admin.name = Faker::Name.name 
+			admin.email = Faker::Internet.safe_email(admin.name)
+			admin.role = ['Super', 'Manager', 'Employee']
+			admin.encrypted_password = Admin.new(:password => password).encrypted_password
+			admin.sign_in_count = 0
+		end
+	  puts 'All done!!!'
+  end
 
   
   desc "Create 50 random posts"
@@ -26,12 +26,13 @@ namespace :db do
 	require 'ffaker'
 
 
-	    Post.populate 50 do |post|
+	    Post.populate 10 do |post|
     	  	post.user_id = 1
-    		post.body = FFaker::DizzleIpsum.paragraphs
-    	    post.title = FFaker::Skill.specialties
+    		post.body = FFaker::HTMLIpsum.fancy_string
+    	    post.title = Faker::Hacker.say_something_smart
  
 	    end
+
 	    
 
   end
@@ -40,13 +41,14 @@ namespace :db do
   task :populate_products => :environment do
 	require 'populator'
 	require 'ffaker'
-	Product.populate 50 do |product|
+	require 'faker'
+	Product.populate 10 do |product|
 
     		product.name = FFaker::Product.product_name
     		product.description = FFaker::HipsterIpsum.paragraphs
     		product.price = 4..1000
     		product.qty = 39..599
-    		product.img_url = FFaker::Avatar.image
+    		product.img_url = Faker::Company.logo
  
 	    end
 	

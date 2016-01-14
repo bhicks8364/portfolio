@@ -1,22 +1,24 @@
 <div class='col-md-12 dark'>
-  <p id="notice"><%= notice %></p>
+<div class='center'>
+  <div class='well well-sm black'>
+  
+  <h4><%= @post.title %></h4>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+<div class='well black'>
+ 
+  <%= markdownify(@post.body)%>
+</div>
 
 <p>
   <strong>User:</strong>
   <%= @post.user_id %>
 </p>
+<%= link_to 'Destroy', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-info' %> 
+<%= link_to 'Back', posts_path, class: 'btn btn-info' %>
+</div> 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
 
 </div>

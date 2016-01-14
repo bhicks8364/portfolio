@@ -3,7 +3,7 @@
 
 <h1>Listing Products</h1>
 
-<table class='table'>
+<table class='table table-bordered darker center'>
   <thead>
     <tr>
       <th></th>
@@ -25,14 +25,14 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         
-        <td><%= product.price %></td>
+        <td><%= number_to_currency(product.price) %></td>
         <td><%= product.qty %></td>
        
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @posts %>
 <br>
 
 <%= link_to 'New Product', new_product_path %>

@@ -6,7 +6,7 @@
     <%= f.input :description %>
     <%= f.input :img_url %>
     <%= f.input :price %>
-    <%= f.input :qty %>
+    <%= f.input :qty, as: :select, collection: 1..100, include_blank: false %>
   </div>
 
   <div class="form-actions">

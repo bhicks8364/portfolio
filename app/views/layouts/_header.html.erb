@@ -1,4 +1,4 @@
- <div  class=''>
+ <div  class='darker'>
      
     <ul id='header-nav' class="nav nav-tabs">
      <li><%= link_to "About Us", about_path, class: '' %></li>
@@ -9,9 +9,10 @@
            <li><%= link_to "Posts", posts_path, class: '' %></li>
            <li><%= link_to "Home", home_path, class: '' %></li>
            
-            <li class='pull-right'><%= link_to "Admin Dashboard", admin_root_path, class: '' %></li>
-            <li class='pull-right'><%= link_to "Admin Posts", admin_posts_path, class: '' %></li>
-           
+            
+            <li class='pull-right'><%= link_to "Sign Out", destroy_admin_session_path, class: '' if admin_signed_in?  %></li>
+            <li class='pull-right'><%= link_to "Admin Registration", new_admin_registration_path, class: '' if !admin_signed_in? %></li>
+           <li class='pull-right'><%= link_to "Admin Dashboard", admin_root_path, class: '' if admin_signed_in?  %></li>
     </ul>
    
  </div>

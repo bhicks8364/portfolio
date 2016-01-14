@@ -14,5 +14,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "home";
-@import "posts";
-@import "admin-overrides";
+// @import "posts";
+// @import "products";
+// @import "admin-overrides";
+#main-nav {
+    background-color: black;
+    border: none;
+}
+.black {
+    color: black;
+    a {
+    color: black;
+    font-weight: bold;
+    }
+}
+input {
+    color: black;
+}
+
+.form-inputs {
+    color: black;
+}

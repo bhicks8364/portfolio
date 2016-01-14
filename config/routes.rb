@@ -1,20 +1,10 @@
 Rails.application.routes.draw do
-  
-  
-
-  namespace :admin do
-    DashboardManifest::DASHBOARDS.each do |dashboard_resource|
-      resources dashboard_resource
-    end
-
-    root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
-  end
-
+  # devise_for :admins
+  devise_for :admins do
+  get '/admins/sign_out' => 'devise/sessions#destroy'
+end
   resources :posts
   resources :products
- 
- 
- 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -26,6 +16,7 @@ Rails.application.routes.draw do
     get 'about' => 'home#about'
     get 'home' => 'home#home'
     get 'contact' => 'home#contact'
+    get 'services' => 'home#services'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

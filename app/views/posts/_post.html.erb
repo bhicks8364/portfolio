@@ -1,0 +1,16 @@
+<div class='list-group-item'>
+    <%= link_to(post, class: '') do %>
+    <h4>
+  
+  <%= post.title %>
+</h4>
+
+<%= markdownify(post.body)%>
+ 
+
+<% end %>
+ 
+
+
+</div>
+<br>

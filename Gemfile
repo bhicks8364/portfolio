@@ -16,6 +16,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
+gem 'html-pipeline'
+gem "gemoji",             "~> 2.0"
+gem "github-markdown",    "~> 0.5"
+gem "sanitize",    "~> 3.0.3"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -26,6 +30,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'annotate'
+gem 'will_paginate', '~> 3.0.6'
+gem 'faker'
+gem 'ransack', '~> 1.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

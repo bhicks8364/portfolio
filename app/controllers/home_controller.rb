@@ -5,4 +5,7 @@ class HomeController < ApplicationController
     end
     def contact
     end
+    def services
+        
+    end
 end
